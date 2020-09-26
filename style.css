@@ -1,0 +1,61 @@
+html, body {
+    background-color: whitesmoke;
+    font-family: 'Merriweather Sans', sans-serif;;
+}
+h1, h2, p, a, span {
+    color: rgb(39, 8, 59);
+    text-align: center;
+    margin-top: 60px;
+}
+
+#start {
+    border-color: thistle;
+    color: white;
+    background-color: rgb(39, 8, 59);
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 28px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin: 0;
+    position: fixed ;
+    top: 71%;
+    left: 44%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+  }
+
+#score-list {
+    font-size: 1.2rem;
+    color:rgb(39, 8, 59);    
+}
+ol {
+    list-style: none;
+    counter-reset: li;
+}
+
+li {
+    counter-increment: li;
+}
+
+li::before {
+    content: "." counter(li);
+    color: purple;
+    display: inline-block;
+    width: 1rem;
+    margin-left: -1.5rem;
+    margin-right: 0.5rem;
+    text-align: right;
+    direction: rtl;
+}
+
+hr {
+    height: 2px;
+    background-color: purple;
+}
+
+#scoresTitle {
+    padding-left: 1rem;
+}
