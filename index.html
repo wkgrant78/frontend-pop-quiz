@@ -12,12 +12,12 @@
     <link rel="stylesheet" href="style.css" />
  
     <script src="main.js"></script>
-    <Script> src="questions"</Script>
+    <Script src="questions"></Script>
 
   </head>
 
   <body>
-    <!-- Home Header -->
+    <!-- Home Page Header ** NEED TO FIX TIMER POSITION & VHS ISN"T SHOWING UP -->
         <header class="p-5" style="background-color: rgb(44, 4, 59)">
             <a href="highscores.html">View High Scores</a>
             <span id="timer" class="float-right mr-1">Time: 0</span>
@@ -27,7 +27,7 @@
         <div class="container mt-5" id="home">
             <div class="row justify-content-center mt-5 pt-3 pb-3">
                 <div class="col-10 col-lg-8 text-center">
-                    <h1>BCS Pop Quiz"</h1>
+                    <h1>BCS Pop Quiz</h1>
                     <p>You will have 90 seconds to answer the following multiple choice questions. <br>
                     <br>
                     <strong>Important!</strong> For every wrong answer, you will lose 10 seconds. <br>
@@ -37,7 +37,35 @@
             </div>
         </div>
 
-    
+        <!-- Question and Answer Display Container -->
+        <div class="container mt-5 d-none" id="quiz">
+            <div class="row justify-content-center mt-5 pt-3 pb-3">
+                <div class="col-10 col-lg-8" id="question-container">
+                    <h3 id="questions">Question</h3>
+                    <ul id="answers">
+                        <li class="answerChoice">A)</li>
+                        <li class="answerChoice">B)</li>
+                        <li class="answerChoice">C)</li>
+                        <li class="answerChoice">D)</li>
+                    </ul>
+                    <p class="results"></p>
+                </div>
+            </div>
+        </div>
 
+        <!-- Results Container -->
+        <div class="container mt-5 d-none" id="submit">
+            <div class="row justify-content-center mt-5 pt-3 pb-3">
+                <div class="col-10 col-lg-8">
+                    <h2>Way to go!</h2>
+                    <p id="finalScore"></p>
+                    <form class="endGame">
+                        <label for="enterName">Name:</label>
+                        <input type="text" id="userName">
+                        <button type="button" class="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
   </body>
 </html>
