@@ -11,15 +11,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
  
-    <script src="main.js"></script>
-    <Script src="questions"></Script>
+
 
   </head>
 
   <body>
     <!-- Home Page Header ** NEED TO FIX TIMER POSITION & HS ISN"T SHOWING UP -->
         <header class="p-5" style="background-color: rgb(44, 4, 59)">
-            <a href="highscores.html">View High Scores</a>
+            <a href="highscore.html">View High Scores</a>
             <span id="JavaScript" class="float-right mr-1">Time: 0</span>
         </header>
 
@@ -38,19 +37,30 @@
         </div>
 
         <!-- Question and Answer Display Container -->
-        <div class="container mt-5 d-none" id="quiz">
+        <!-- <div class="container mt-5 d-none" id="question-container">
             <div class="row justify-content-center mt-5 pt-3 pb-3">
                 <div class="col-10 col-lg-8" id="question-container">
-                    <h3 id="questions">Question</h3>
-                    <ul id="answers">
-                        <li class="choicesEl">A)</li>
-                        <li class="choicesEl">B)</li>
-                        <li class="choicesEl">C)</li>
-                        <li class="choicesEl">D)</li>
+                    <h3 id="questions" class="mb-4">Question</h3>
+                    <ul id="answers" class="list-unstyled">
+                        <li class="answerChoice">A) </li>
+                        <li class="answerChoice">B) </li>
+                        <li class="answerChoice">C) </li>
+                        <li class="answerChoice">D) </li>
                     </ul>
                     <p class="results"></p>
                 </div>
             </div>
+        </div> -->
+
+        <div id="question-container">
+            <h3 id="questions">Question</h3>
+            <ul id="answers">
+                <!-- <li>A) </li>
+                <li>B) </li>
+                <li>C) </li>
+                <li>D) </li> -->
+            </ul>
+            <!-- <p class="results"></p> -->
         </div>
 
         <!-- Results Container -->
@@ -67,5 +77,12 @@
                 </div>
             </div>
         </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="questions.js"></script>
+    <script src="main.js"></script>
+
   </body>
 </html>
