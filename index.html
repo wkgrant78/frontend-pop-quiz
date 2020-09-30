@@ -1,28 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    
-    <title>JavaScript Pop Quiz!</title>
+<html lang="en-US">
+    <head>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" />
- 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
 
-  </head>
+        <title>JavaScript Pop Quiz!</title>
+    </head>
 
-  <body>
-    <!-- Home Page Header ** NEED TO FIX TIMER POSITION & HS ISN"T SHOWING UP -->
+    <body>
         <header class="p-5" style="background-color: rgb(44, 4, 59)">
             <a href="highscore.html">View High Scores</a>
-            <span id="JavaScript" class="float-right mr-1">Time: 0</span>
+            <span id="timer" class="float-right mr-2">Time: 0</span>
         </header>
-
-    <!-- Home Page -->
+        
+        <!-- Home Screen -->
         <div class="container mt-5" id="home">
             <div class="row justify-content-center mt-5 pt-3 pb-3">
                 <div class="col-10 col-lg-8 text-center">
@@ -31,58 +27,46 @@
                     <br>
                     <strong>Important!</strong> For every wrong answer, you will lose 10 seconds. <br>
                     So be careful and good luck!</p>
-                    <button type="button" id="start">Start Quiz</button>
+                    <button type="button" id="startBtn" class="btn btn-info btn-lg">START</button>
                 </div>
             </div>
         </div>
-
-        <!-- Question and Answer Display Container -->
-        <!-- <div class="container mt-5 d-none" id="question-container">
+        
+        <!-- Q&A -->
+        <div class="container mt-5 d-none" id="quiz">
             <div class="row justify-content-center mt-5 pt-3 pb-3">
-                <div class="col-10 col-lg-8" id="question-container">
-                    <h3 id="questions" class="mb-4">Question</h3>
+                <div class="col-10 col-lg-8" id="QA-block">
+                    <h3 id="questions" class="mb-4">QUESTION</h3>
                     <ul id="answers" class="list-unstyled">
                         <li class="answerChoice">A) </li>
                         <li class="answerChoice">B) </li>
                         <li class="answerChoice">C) </li>
                         <li class="answerChoice">D) </li>
                     </ul>
-                    <p class="results"></p>
+                    <p class="feedback"></p>
                 </div>
             </div>
-        </div> -->
-
-        <div id="question-container">
-            <h3 id="questions">Question</h3>
-            <ul id="answers">
-                <!-- <li>A) </li>
-                <li>B) </li>
-                <li>C) </li>
-                <li>D) </li> -->
-            </ul>
-            <!-- <p class="results"></p> -->
         </div>
-
-        <!-- Results Container -->
-        <div class="container mt-5 d-none" id="submit">
+        
+        <!-- Finished Screen -->
+        <div class="container mt-5 d-none" id="submit-score">
             <div class="row justify-content-center mt-5 pt-3 pb-3">
                 <div class="col-10 col-lg-8">
-                    <h2>Way to go!</h2>
-                    <p id="finalScore"></p>
-                    <form class="endGame">
-                        <label for="enterName">Name:</label>
-                        <input type="text" id="userName">
-                        <button type="button" class="submit">Submit</button>
+                    <h2>Way to go!!!</h2>
+                    <p id="user-score"> </p>
+                    <form class="form-group">
+                        <label for="new-score">Enter initals: </label>
+                        <input type="text" id="userName"> 
+                        <button type="button" class="btn btn-info btn-sm submitBtn">Submit</button>
                     </form>
                 </div>
             </div>
         </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="questions.js"></script>
-    <script src="main.js"></script>
-
-  </body>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="questions.js"></script>
+        <script src="main.js"></script>
+    </body>
 </html>

@@ -1,18 +1,18 @@
 var questions = [
     {
-        title: "In an HTML file, which tag do you typically put the JavaScript in?",
+        title: "Primarily, inside which tag of an HTML document do you put the JavaScript?",
         choices: ["<java>", "<body>", "<script>", "<img>"],
         answer: "<script>"
     },
     {
-        title: "What do you use in an if/else statement is enclosed the condition?.",
+        title: "The condition in an if/else statement is enclosed within ______.",
         choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
         answer: "parentheses"
     },
     {
-        title: "How do you referencing an external script called 'whatabatadingbong.js'?",
+        title: "What is the syntax for referencing an external script called 'abc.js'?",
         choices: ["<script class='abc.js'>", "<script href='abc.js'>", "<script link='abc.js'>", "<script src='abc.js'>"],
-        answer: "<script src='whatabatadingbong.js'>"
+        answer: "<script src='abc.js'>"
     },
     {
         title: "Which type of pop up box will allow a user to type a response?",

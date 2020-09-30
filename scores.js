@@ -1,18 +1,18 @@
 var restartBtn = document.querySelector("button.restartBtn"),
     clearBtn = document.querySelector("button.clearBtn"),
     // get the highScores list and turn it back into an object
-    highScore = JSON.parse(localStorage.getItem("highScore") || "[]"),
+    highScores = JSON.parse(localStorage.getItem("highScores") || "[]"),
     scoreList = document.getElementById("score-list");
 
     // sort scores from high to low
-    highScore.sort(function (a,b){
+    highScores.sort(function (a,b){
         return b.score - a.score
     })
 
     // display the scores
-    for (var s = 0; s < highScore.length; s++) {
+    for (var s = 0; s < highScores.length; s++) {
         var newLi = document.createElement("li")
-        newLi.textContent = highScore[s].name + " - " + highScore[s].score
+        newLi.textContent = highScores[s].name + " - " + highScores[s].score
         scoreList.appendChild(newLi)
     }
 
