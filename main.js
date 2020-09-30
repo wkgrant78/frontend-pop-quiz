@@ -116,7 +116,7 @@ answerChoices.addEventListener("click", function (event) {
     } 
     // innerHTML property sets/returns the HTML content of an element
     else {
-        pEl.innerHTML = "Oops! That's not correct";
+        pEl.innerHTML = "Oops! There goes 10 seconds!";
         setTimeout(hideResults,1000);
         secondsLeft = secondsLeft - 10;
         showResults();
