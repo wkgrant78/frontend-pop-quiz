@@ -18,7 +18,7 @@
             <span id="timer" class="float-right mr-2">Time: 0</span>
         </header>
         
-        <!-- Home Screen -->
+        <!-- Home Screen - container with instructions & start quiz btn -->
         <div class="container mt-5" id="home">
             <div class="row justify-content-center mt-5 pt-3 pb-3">
                 <div class="col-10 col-lg-8 text-center">
@@ -32,31 +32,32 @@
             </div>
         </div>
         
-        <!-- Q&A -->
+        <!-- Q&A  container - displaying questions & answer choices-->
         <div class="container mt-5 d-none" id="quiz">
             <div class="row justify-content-center mt-5 pt-3 pb-3">
                 <div class="col-10 col-lg-8" id="QA-block">
-                    <h3 id="questions" class="mb-4">QUESTION</h3>
+                    <h3 id="questions" class="mb-4">Question: </h3>
                     <ul id="answers" class="list-unstyled">
                         <li class="answerChoice">A) </li>
                         <li class="answerChoice">B) </li>
                         <li class="answerChoice">C) </li>
                         <li class="answerChoice">D) </li>
                     </ul>
-                    <p class="feedback"></p>
+                    <p class="results"></p>
                 </div>
             </div>
         </div>
         
-        <!-- Finished Screen -->
+        <!-- Finish Screen - container displaying score and input box-->
         <div class="container mt-5 d-none" id="submit-score">
             <div class="row justify-content-center mt-5 pt-3 pb-3">
                 <div class="col-10 col-lg-8">
-                    <h2>Way to go!!!</h2>
+                    <h2>Way to go!! <br> 
+                       <br> You're all done!</h2>
                     <p id="user-score"> </p>
                     <form class="form-group">
                         <label for="new-score">Enter initals: </label>
-                        <input type="text" id="userName"> 
+                        <input type="text" id="userInitials"> 
                         <button type="button" class="btn btn-info btn-sm submitBtn">Submit</button>
                     </form>
                 </div>

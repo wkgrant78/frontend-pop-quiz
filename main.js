@@ -1,3 +1,4 @@
+// define variables
 var startBtn = document.getElementById("startBtn");
 var submitBtn = document.querySelector("button.submitBtn")
 var secondsLeft = (questions.length * 15 + 1);
@@ -11,15 +12,15 @@ var answerChoices = document.getElementById("answers");
 var questionNumber = -1;
 var answer;
 
-// initiate timer on.click "Start" -> switch btwn "home" & "quiz" using Bootstrap class 'd-none'
+// initiate timer on click "Start" -> switch btwn "home" & "quiz" using Bootstrap class 'd-none'
 function startTimer() {
 
     document.getElementById("home").classList.add('d-none');
     document.getElementById("quiz").classList.remove('d-none');
 
-    // set/reset timer to 90 seconds on.click
+    // set/reset timer to 90 seconds on click
     setTimer();
-    // initiate questions on.click
+    // initiate questions on click
     makeQuestions();
 }
 
@@ -29,6 +30,7 @@ function setTimer() {
         secondsLeft--;
         timerEl.textContent = "Time: " + secondsLeft;
 
+        // timer expires at 500 secs, defaults to "finished screen" for score & user input
         if (secondsLeft === 0 || questionNumber === questions.length) {
             clearInterval(countdown);
             setTimeout(displayScore, 500);
@@ -44,7 +46,7 @@ function makeQuestions() {
     questionHead.textContent = questions[questionNumber].title;
     answerChoices.innerHTML = "";
 
-    // pulls 'choices' array from questions.js, assign btn and attr for "i", create btn on.click event to continue to next question
+    // pulls 'choices' array from questions.js, assign btn and attr for "i", create btn click event to continue to next question
     var choices = questions[questionNumber].choices;
 
     for (var i = 0; i < choices.length; i++) {
@@ -63,7 +65,7 @@ function displayScore() {
     userScoreEl.textContent = "Your final score is " + secondsLeft + ".";
 }
 
-// on.click event start/submit.... adds score to local highscore string
+// click event start/submit.... adds score to local highscore string
 startBtn.addEventListener("click", startTimer);
 submitBtn.addEventListener("click", function (event) {
     event.stopPropagation();
