@@ -1,4 +1,4 @@
-# WKG-HW4 Web APIS: Code Quiz
+# FRONTEND POP QUIZ
 
 ### DESCRIPTION:
 
@@ -23,20 +23,8 @@ Build a timed code quiz with multiple-choice questions. The app will run in the 
 * created scores js - nothing working at this point
 * worked with tutor on debugging start btn/makeQuiz function
 * determined bug was due to an 's' on highscore.html
-* successfully deployed... at least it was at 22:47
+* successfully deployed
 
-
-### LINKS:
-
-* Deployed application URL:
-
-    https://wkgrant78.github.io/WKG-HW4/
-
-* GitHub Repo URL:
-
-    https://github.com/wkgrant78/WKG-HW4
-
-- - -
 
 ### HELPFUL SOURCES:
 
